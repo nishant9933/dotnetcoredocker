@@ -18,10 +18,8 @@ jobs:
       with:
         dotnet-version: 3.1.301
     - name: Install dependencies
-      run: dotnet sln
-    - name: Install dependencies1
-      run: dotnet restore ../linuxdockern.sln
+      run: dotnet restore ./linuxdockern.sln
     - name: Build
-      run: dotnet build ../linuxdockern.sln --configuration Release --no-restore
+      run: dotnet build ./linuxdockern.sln --configuration Release --no-restore
     - name: Test
-      run: dotnet test ../linuxdockern.sln --no-restore --verbosity normal
+      run: dotnet test ./linuxdockern.sln --no-restore --verbosity normal
